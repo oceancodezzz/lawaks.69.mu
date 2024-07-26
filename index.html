@@ -32,10 +32,19 @@
     </style>
 </head>
 <body>
-    <audio id="creepy-audio" src="lawaks.mp3" autoplay loop></audio>
+    <audio id="creepy-audio" src="lawaks.mp3" controls></audio>
     <div class="container">
         <div class="text">sangar awakmu cak</div>
         <img src="lawaks.jpeg" alt="lawaks">
     </div>
+
+    <script>
+        window.onload = function() {
+            var audio = document.getElementById('creepy-audio');
+            audio.play().catch(function(error) {
+                console.log('Auto-play was prevented:', error);
+            });
+        }
+    </script>
 </body>
 </html>
